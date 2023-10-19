@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Consulta de Endereço por CEP</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Consulta de Endereço por CEP</h1>
+        <form id="cepForm">
+            <label for="cepInput">CEP:</label>
+            <input type="text" id="cepInput" placeholder="Digite o CEP" required>
+            <button type="submit">Consultar</button>
+        </form>
+
+        <div id="loadingIndicator" class="hidden">
+            <img src="./gif/loading.gif" alt="Carregando...">
+            <p>Carregando...</p>
+        </div>
+
+        <div id="enderecoCard" class="hidden">
+
+            <div class="endereco">
+                <h2>Endereço:</h2>
+                <img src="./gif/correios.gif" width="100" height="40" style="border-radius: 5px;">
+            </div>            
+
+            <table>
+                <tr>
+                    <td><strong>CEP:</strong></td>
+                    <td id="cepInfo"></td>
+                </tr>
+                <tr>
+                    <td><strong>Logradouro:</strong></td>
+                    <td id="logradouroInfo"></td>
+                </tr>
+                <tr>
+                    <td><strong>Bairro:</strong></td>
+                    <td id="bairroInfo"></td>
+                </tr>
+                <tr>
+                    <td><strong>Cidade:</strong></td>
+                    <td id="cidadeInfo"></td>
+                </tr>
+                <tr>
+                    <td><strong>Estado:</strong></td>
+                    <td id="estadoInfo"></td>
+                </tr>
+            </table>
+            <button id="showMapButton">Mostrar no Google Maps</button>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
